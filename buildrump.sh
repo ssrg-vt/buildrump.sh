@@ -707,7 +707,7 @@ EOF
 	# Need to:
 	#   a) migrate more defines there
 	#   b) set no MSI only when necessary
-	printf '#define NO_PCI_MSI_MSIX\n' > ${BRIMACROS}.building
+	printf '#define NO_PCI_MSI_MSIX\n#define NET_MPSAFE\n' > ${BRIMACROS}.building
 
 	# tool build done.  flip mk.conf name so that it gets picked up
 	omkconf="${MKCONF}"
